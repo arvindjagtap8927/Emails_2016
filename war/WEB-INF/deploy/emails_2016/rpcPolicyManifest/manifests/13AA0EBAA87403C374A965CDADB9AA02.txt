@@ -1,0 +1,2 @@
+serviceClass: communication.emails.client.GreetingService
+path: BBF964856665C054D5B4E483A7EB62CA.gwt.rpc

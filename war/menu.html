@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <script type="text/javascript">
+            function getUrlData()
+            {
+            	var url = location.href;
+            	var qs = url.substring(url.indexOf('?'));
+            	if(url.indexOf('?') == -1)
+            		qs = "";
+            	document.getElementById('link1').href = "chart.jsp"+qs;
+                document.getElementById('link2').href = "commercial.jsp"+qs;
+                document.getElementById('link3').href = "defaulters.jsp"+qs;
+                document.getElementById('link4').href = "emails.jsp"+qs;
+                document.getElementById('link5').href = "policy.html"+qs;
+            	if(url.indexOf('?') == -1)
+	                document.getElementById('link6').href = "pay.jsp"+qs;
+	            else
+	            	document.getElementById('link6').href = "details.jsp"+qs;
+                document.getElementById('link7').href = "contactinfo.jsp"+qs;
+                document.getElementById('link9').href = "paid.jsp"+qs;
+                document.getElementById('link10').href = "expenses.html"+qs;
+                document.getElementById('link11').href = "waivers.jsp"+qs;
+            }
+    </script>
+  </head>
+  <body onload="getUrlData()">
+  	<a id="link2" href="commercial.jsp" target="right">Commercial Usage</a><br>
+  	<a id="link7" href="contactinfo.jsp" target="right">Contact Information</a><br>
+  	<a id="link1" href="chart.jsp" target="right">Dashboard</a><br>
+  	<a id="link3" href="defaulters.jsp" target="right">Defaulters</a><br>
+  	<a id="link6" href="pay.jsp" target="right">Dues</a><br>
+  	<a id="link9" href="paid.jsp" target="right">Payments</a><br>
+  	<a id="link4" href="emails.jsp" target="right">Not Reachable</a><br>
+  	<a id="link5" href="policy.html" target="right">Policy</a><br>
+  	<a id="link10" href="expenses.html" target="right">Expenses</a><br>
+  	<a id="link11" href="waivers.jsp" target="right">Waivers</a><br>
+  	<a id="link8" href="https://docs.google.com/forms/d/1apH4s9-0XPgfS-LLMPxmG-2vTufX5KSzaePWUBl4fjU/viewform" target="right">Feedback</a><br>
+  </body>
+</html>

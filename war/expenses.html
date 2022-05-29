@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script type="text/javascript">
+            function getUrlData()
+            {
+            	var url = location.href;
+            	var qs = url.substring(url.indexOf('?'));
+            	if(url.indexOf('?') == -1)
+            		qs = "";
+            	document.getElementById('2014').href = "http://2014.sendmg4mails.appspot.com/expenses.jsp"+qs;
+                document.getElementById('2015').href = "http://2015.sendmg4mails.appspot.com/expenses.jsp"+qs;
+                document.getElementById('2016').href = "http://2016.sendmg4mails.appspot.com/expenses.jsp"+qs;
+            }
+    </script>
+  </head>
+  <body onload="getUrlData()">
+  	Click on the following links to open the expenses report for respective year.<br><br>
+  	<a id="2014" href="http://2014.sendmg4mails.appspot.com/expenses.jsp">Financial Year 2014-15</a><br>
+  	<a id="2015" href="http://2015.sendmg4mails.appspot.com/expenses.jsp">Financial Year 2015-16</a><br>
+  	<a id="2016" href="http://2016.sendmg4mails.appspot.com/expenses.jsp">Financial Year 2016-17</a><br>
+  </body>
+</html>

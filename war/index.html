@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>SendMG4Emails</title>
+  <script type="text/javascript">
+            function getParameter(paramName) {
+                var searchString = window.location.search.substring(1), i, val, params = searchString.split("&");
+
+                for ( i = 0; i < params.length; i++) {
+                    val = params[i].split("=");
+                    if (val[0] == paramName) {
+                        return val[1];
+                    }
+                }
+                return null;
+            }
+
+            function getUrlData() {
+                var unit = getParameter("unit");
+                var source = getParameter("source");
+                if(unit != null && source != null)
+                {
+                	document.getElementById('right').src = "http://2016.sendmg4mails.appspot.com/details.jsp?unit="+unit+"&source="+source;
+                	document.getElementById('left').src = "menu.html?unit="+unit+"&source="+source;
+                }
+                else
+                	document.getElementById('right').src = "http://2016.sendmg4mails.appspot.com/pay.jsp";
+            }
+
+  </script>
+ </head>
+ <frameset rows="10%,90%" onload="getUrlData()">
+  <frame id="top" src="top.html" name="top" noresize frameborder=0>
+  <frameset cols="15%,85%" frameborder=0>
+   <frame id="left" src="menu.html" name="left" frameborder=0>
+   <frame id="right" name="right" frameborder=0>
+  </frameset>
+ </frameset>
+ <noframes>
+  <body><p>This page uses frames, but your browser doesn't support them.</p></body>
+ </noframes>
+</html>

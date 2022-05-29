@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+  <!--cron>
+    <url>/sms?smstype=firstreminder</url>
+    <description>Send last reminder SMS for maintenance dues</description>
+    <schedule>1 of month 02:30</schedule>
+  </cron>
+  <cron>
+    <url>/sms?smstype=lastreminder</url>
+    <description>Send last reminder SMS for maintenance dues</description>
+    <schedule>10 of month 02:30</schedule>
+  </cron>
+  <cron>
+    <url>/mails?email=clearance</url>
+    <description>Send reminder mails for cheque clearance</description>
+    <schedule>every day 01:30</schedule>
+  </cron>
+  <cron>
+    <url>/mails?email=validation</url>
+    <description>Send validation mails every day evening</description>
+    <schedule>every day 16:30</schedule>
+  </cron>
+  <cron>
+    <url>/mails?email=status</url>
+    <description>Send Status mails every Saturday</description>
+    <schedule>every saturday 12:00</schedule>
+  </cron>
+  <cron>
+    <url>/sms?smstype=penaltyinfo</url>
+    <description>Send last reminder SMS for maintenance dues</description>
+    <schedule>11 of month 01:30</schedule>
+  </cron-->
+</cronentries>

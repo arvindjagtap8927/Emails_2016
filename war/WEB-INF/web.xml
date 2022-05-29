@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+              http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5"
+         xmlns="http://java.sun.com/xml/ns/javaee">
+
+  <!-- Servlets -->
+  
+  <servlet>
+    <servlet-name>greetServlet</servlet-name>
+    <servlet-class>communication.emails.server.GreetingServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>reminders</servlet-name>
+    <servlet-class>communication.emails.SendMails</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>sendsms</servlet-name>
+    <servlet-class>communication.emails.SendSMS</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>announce</servlet-name>
+    <servlet-class>communication.emails.Announce</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>testMails</servlet-name>
+    <servlet-class>communication.emails.testMails</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>acknowledgements</servlet-name>
+    <servlet-class>communication.emails.SendAcknowledgements</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>refresh</servlet-name>
+    <servlet-class>communication.emails.refresh</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>receiveMails</servlet-name>
+    <servlet-class>communication.emails.receiveMails</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>bouncehandler</servlet-name>
+    <servlet-class>communication.emails.BounceHandlerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>greetServlet</servlet-name>
+    <url-pattern>/emails_2016/greet</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>reminders</servlet-name>
+    <url-pattern>/mails</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>sendsms</servlet-name>
+    <url-pattern>/sms</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>announce</servlet-name>
+    <url-pattern>/announce</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>testMails</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>acknowledgements</servlet-name>
+    <url-pattern>/ack</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>refresh</servlet-name>
+    <url-pattern>/refresh</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>receiveMails</servlet-name>
+    <url-pattern>/_ah/mail/*</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>bouncehandler</servlet-name>
+    <url-pattern>/_ah/bounce</url-pattern>
+  </servlet-mapping>
+  
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Pay</web-resource-name>
+      <url-pattern>/pay.jsp</url-pattern>
+    </web-resource-collection>
+    <web-resource-collection>
+        <web-resource-name>Visits</web-resource-name>
+      	<url-pattern>/visits.jsp</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <!-- Default page to serve -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+</web-app>

@@ -1,0 +1,3 @@
+# Module emails_2016
+# RPC service class, partial path of RPC policy file
+communication.emails.client.GreetingService, BBF964856665C054D5B4E483A7EB62CA.gwt.rpc
